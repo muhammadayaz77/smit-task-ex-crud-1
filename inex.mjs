@@ -19,3 +19,8 @@ app.post('/api/data',(req,res) => {
   res.status(201).json({message : 'data is Post',newItem});
   // Fifth commit
 })
+app.delete('/api/data/:id',(req,res) => {
+    let itemIndex = items.findIndex(i => i.id === parseInt(req.params.id));
+    // Sixth commit 
+    
+})
