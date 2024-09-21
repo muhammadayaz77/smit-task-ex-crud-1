@@ -32,7 +32,7 @@ app.put('/api/data/:id',(req,res) => {
   // eighth commit 
   const index = parseInt(req.params.id - 1);
   if (index < 0 || index >= items.length) return res.status(404).send('Item not found.');
-  
+  // tenth commit 
   const updateItem = {id : items[index].id,...req.body};
   items[index] = updateItem;
   res.json(updateItem)
