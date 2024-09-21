@@ -28,3 +28,10 @@ app.delete('/api/data/:id',(req,res) => {
     res.json(deletedItem);
     // seventh commit
 })
+app.put('/api/data/:id',(req,res) => {
+  // eighth commit 
+ 
+})
+app.listen(3000,() => {
+  console.log('http://localhost:3000');
+})
