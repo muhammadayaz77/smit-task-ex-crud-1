@@ -22,5 +22,9 @@ app.post('/api/data',(req,res) => {
 app.delete('/api/data/:id',(req,res) => {
     let itemIndex = items.findIndex(i => i.id === parseInt(req.params.id));
     // Sixth commit 
-    
+    if(itemIndex == -1) return res.status(404).json({message : `item at index : ${itemIndex} not found`})
+
+    let deletedItem = items.splice(itemIndex,1);
+    res.json(deletedItem);
+    // seventh commit
 })
